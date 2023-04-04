@@ -120,11 +120,11 @@ dependencies {
     api 'com.android.support:preference-v7:25.3.1'
     api 'com.android.support:mediarouter-v7:25.3.1'
     api 'com.android.support:design:25.3.1'
-    api 'com.linkedin.dexmaker:dexmaker:2.28.1'
-    api 'cz.msebera.android:httpclient:4.4.1.2'
-    api 'commons-codec:commons-codec:1.10'
+    api 'com.linkedin.dexmaker:dexmaker:2.28.3'
+    api 'cz.msebera.android:httpclient:4.5.8'
+    api 'commons-codec:commons-codec:1.15'
     api 'org.jsoup:jsoup:1.14.3'
-    api 'commons-io:commons-io:2.5' // older android requires 2.5
+    api 'commons-io:commons-io:2.11.0' // older android requires 2.5
     api('net.i2p.android.ext:floatingactionbutton:1.10.1') { exclude group: 'com.android.support' }
     api('com.github.axet:java-unrar:1.7.0-4') { exclude group: 'commons-logging', module: 'commons-logging' }
     api 'com.github.axet:zip4j:2.9.0-1'
