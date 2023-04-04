@@ -1,0 +1,131 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        google()
+        maven { url 'https://jitpack.io' }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.4' // see notes-gradle-4.0.0.txt
+        classpath 'digital.wup:android-maven-publish:3.6.2'
+    }
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+    google()
+    maven { url 'https://jitpack.io' }
+
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'signing'
+apply plugin: 'digital.wup.android-maven-publish' // 'gradle publishToMavenLocal' and 'publish' tasks
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 33 // 24+ - unable to start intent with 'file://'
+        versionCode 677
+        versionName "1.35.28"
+        consumerProguardFiles 'consumer-proguard-rules.pro'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+// https://docs.gradle.org/current/userguide/publishing_maven.html
+
+task javadoc(type: Javadoc) {
+    failOnError = false // options.addStringOption('Xdoclint:none', '-quiet')
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId 'com.github.topol777'
+            artifactId 'android-library'
+            version android.defaultConfig.versionName
+
+            from components.android
+            artifact sourcesJar
+            artifact javadocJar
+
+            pom {
+                name = 'Android Library'
+                description = 'Android Simple Widgets and Support classes.'
+                url = 'https://gitlab.com/topol777/android-library'
+                licenses {
+                    license {
+                        name = 'GNU LESSER GENERAL PUBLIC LICENSE 3.0'
+                        url = 'http://www.gnu.org/copyleft/lesser.html'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'topol777'
+                        name = 'Anatoliy Svetkin and Alexey Kuznetcov'
+                        email = 'topol777@me.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:' + pom.url.get()
+                    developerConnection = 'scm:git:' + pom.url.get()
+                    url = pom.url
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots/"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username project.findProperty('ossrhUsername')
+                password project.findProperty('ossrhPassword')
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    api 'com.android.support:support-v4:25.3.1'
+    api 'com.android.support:appcompat-v7:25.3.1'
+    api 'com.android.support:preference-v7:25.3.1'
+    api 'com.android.support:mediarouter-v7:25.3.1'
+    api 'com.android.support:design:25.3.1'
+    api 'com.linkedin.dexmaker:dexmaker:2.28.1'
+    api 'cz.msebera.android:httpclient:4.4.1.2'
+    api 'commons-codec:commons-codec:1.10'
+    api 'org.jsoup:jsoup:1.14.3'
+    api 'commons-io:commons-io:2.5' // older android requires 2.5
+    api('net.i2p.android.ext:floatingactionbutton:1.10.1') { exclude group: 'com.android.support' }
+    api('com.github.axet:java-unrar:1.7.0-4') { exclude group: 'commons-logging', module: 'commons-logging' }
+    api 'com.github.axet:zip4j:2.9.0-1'
+}

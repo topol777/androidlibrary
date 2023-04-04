@@ -1,0 +1,87 @@
+<resources>
+    <!--OpenFileDialog-->
+    <string name="filedialog_rename">Verander Naam</string>
+    <string name="filedialog_delete">Verwijder</string>
+    <string name="filedialog_newfolder">Nieuwe Folder</string>
+    <string name="filedialog_foldername">Folder Naam</string>
+    <string name="filedialog_unablecreatefolder">Kon folder niet aanmaken: \'%1$s\'</string>
+    <string name="filedialog_foldercreated">Folder \'%1$s\' Aangemaakt</string>
+    <string name="filedialog_folderdeleted">Verwijderd: \'%1$s\'</string>
+    <string name="filedialog_renameto">Naam veranderd naar: \'%1$s\'</string>
+    <string name="filedialog_empty">Lege Lijst</string>
+    <string name="filedialog_readonly">Read only directory</string>
+    <string name="filedialog_selectfolder">Selecteer alstublieft een folder</string>
+
+    <string name="ShareAction">Deel</string>
+    <string name="shared_via">Gedeeld via %1$s</string>
+
+    <plurals name="days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagen</item>
+    </plurals>
+
+    <plurals name="hours">
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uren</item>
+    </plurals>
+
+    <plurals name="minutes">
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minuten</item>
+    </plurals>
+
+    <plurals name="seconds">
+        <item quantity="one">%d seconde</item>
+        <item quantity="other">%d seconden</item>
+    </plurals>
+
+    <string name="days_symbol">d</string>
+
+    <string name="size_gb">%1$.1f GB</string>
+    <string name="size_mb">%1$.1f MB</string>
+    <string name="size_kb">%1$.1f kb</string>
+
+    <string name="optimization_dialog">Optimalisatie-instellingen</string>
+    <string name="optimization_message">Overweeg om de applicatie toe te voegen aan de batterij-manager whitelist om te voorkomen dat de applicatie stopgezet wordt om batterij te besparen</string>
+    <string name="optimization_killed">Applicatie is gestopt door Android. Overweeg om de applicatie te whitelisten</string>
+    <string name="optimization_alive">Keep Alive Service</string>
+    <string name="optimization_alive_summary">Achtergrondservice houdt applicatie bezig</string>
+    <string name="optimization_icon">Aanhoudend Icoon</string>
+    <string name="optimization_icon_summary">Verplicht op sommige apparaten als de applicatie constant verwijderd wordt</string>
+    <string name="optimization_system">Batterij-optimalisatie</string>
+    <string name="optimization_system_summary">Open systeem batterij-optimalisatiedialoog</string>
+
+    <string name="menu_settings">Instellingen</string>
+    <string name="menu_about">Over</string>
+
+    <string name="open_browser">Open Browser</string>
+    <string name="are_you_sure">Weet u het zeker?</string>
+    <string name="default_button">Standaard</string>
+
+    <string name="not_permitted">Niet toegestaan</string>
+    <string name="close">Sluit</string>
+
+    <string name="system_default">Systeemstandaard</string>
+
+    <string-array name="screen_lock_text">
+        <item>@string/system_default</item>
+        <item>Houd aan</item>
+        <item>Uit na 30 sec</item>
+        <item>Uit na 1 min</item>
+        <item>Uit na 5 min</item>
+        <item>Uit na 30 min</item>
+    </string-array>
+
+    <string name="pref_screenlock_title">Houd scherm aan</string>
+
+    <string name="migrating_data">Data migreren</string>
+    <string name="legacy_summary">Enable / Disable legacy storage access</string>
+    <string name="legacy_title">Legacy Storage</string>
+    <string name="manual_path">Manual</string>
+
+    <string-array name="themes_text">
+        <item>@string/system_default</item>
+        <item>Licht Thema</item>
+        <item>Donker Thema</item>
+    </string-array>
+</resources>

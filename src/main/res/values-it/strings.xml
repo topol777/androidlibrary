@@ -1,0 +1,84 @@
+<resources>
+    <!--OpenFileDialog-->
+    <string name="filedialog_rename">Rinomina</string>
+    <string name="filedialog_delete">Elimina</string>
+    <string name="filedialog_newfolder">Nuova Cartella</string>
+    <string name="filedialog_foldername">Nome della Cartella</string>
+    <string name="filedialog_unablecreatefolder">Impossibile create cartella: \'%1$s\'</string>
+    <string name="filedialog_foldercreated">Creata cartella \'%1$s\'</string>
+    <string name="filedialog_folderdeleted">Elimita: \'%1$s\'</string>
+    <string name="filedialog_renameto">Rinominata come: \'%1$s\'</string>
+    <string name="filedialog_empty">Lista vuota</string>
+    <string name="filedialog_readonly">Cartella accessibile in sola lettura</string>
+    <string name="filedialog_selectfolder">Per favore, seleziona una cartella</string>
+
+    <string name="ShareAction">Condividi</string>
+    <string name="shared_via">"Condivisa tramite %1$s"</string>
+
+    <plurals name="days">
+        <item quantity="one">%d giorno</item>
+        <item quantity="other">%d giorni</item>
+    </plurals>
+
+    <plurals name="hours">
+        <item quantity="one">%d ora</item>
+        <item quantity="other">%d ore</item>
+    </plurals>
+
+    <plurals name="minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minuti</item>
+    </plurals>
+
+    <plurals name="seconds">
+        <item quantity="one">%d secondo</item>
+        <item quantity="other">%d secondi</item>
+    </plurals>
+
+    <string name="days_symbol">G</string>
+
+    <string name="size_gb">%1$.1f GB</string>
+    <string name="size_mb">%1$.1f MB</string>
+    <string name="size_kb">%1$.1f kb</string>
+
+    <string name="optimization_dialog">Impostazioni di ottimizzazione della batteria</string>
+    <string name="optimization_message">Valuta di aggiungere questa applicazione alle eccezioni tra le  impostazioni di gestione della batteria del telefono al fine di evitare che l\'applicazione sia rimossa dalla memoria volatile.</string>
+    <string name="optimization_killed">L\'applicazione è stata chiusa dal sistema operativo. Considerare l\'aggiunta dell\'applicazione all\'elenco delle eccezioni del gestore Batteria.</string>
+
+    <string name="menu_settings">Impostazioni</string>
+    <string name="menu_about">About</string>
+    <string name="open_browser">Open Browser</string>
+    <string name="are_you_sure">Sei sicuro ?</string>
+    <string name="default_button">Standard</string>
+    <string name="not_permitted">Non permesso</string>
+    <string name="close">Chiudere</string>
+
+    <string name="system_default">Standard di sistema</string>
+
+    <string-array name="screen_lock_text">
+        <item>@string/system_default</item>
+        <item>Continuare</item>
+        <item>Spegnimento dopo 30 Sec</item>
+        <item>Spegnimento dopo 1 Min</item>
+        <item>Spegnimento dopo 5 Min</item>
+        <item>Spegnimento dopo 30 Min</item>
+    </string-array>
+    <string name="pref_screenlock_title">Mantenere lo schermo attivo</string>
+    <string name="optimization_alive">Servizio di ottimizzazione</string>
+    <string name="optimization_alive_summary">Il servizio in background mantiene l\'applicazione in funzione.</string>
+    <string name="optimization_icon">Simbolo permanente</string>
+    <string name="optimization_icon_summary">Richiesto su alcuni dispositivi se l\'applicazione viene costantemente rimossa.</string>
+    <string name="optimization_system">Ottimizzazione della Batteria</string>
+    <string name="optimization_system_summary">Aprire il dialogo di sistema per l\'ottimizzazione della batteria.</string>
+
+    <string name="migrating_data">Migrazione dei dati</string>
+    <string name="legacy_summary">Enable / Disable legacy storage access</string>
+    <string name="legacy_title">Legacy Storage</string>
+    <string name="manual_path">Manual</string>
+
+    <string-array name="themes_text">
+        <item>@string/system_default</item>
+        <item>Tema chiaro</item>
+        <item>Tema scuro</item>
+    </string-array>
+</resources>
